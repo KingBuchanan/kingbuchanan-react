@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+<meta charset="utf-8">
+    {% if site.google_analytics %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+      </script>
+    {% endif %}
+    <meta charset="UTF-8">
+{% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+
+      <nav>
+          <div class="nav-title">
+              <span class="Icon Icon--logo Icon--large"></span>
+      
+              <!-- Link in web -->
+              <a class="home-link" href="/">Home Page</a>
+      
+              <!-- Text in mobile -->
+              <p class="home-text">HomePage</p>
+              <span id="caret" class="Icon Icon--caretDown"></span>
+          </div>
+          <ul class="nav-menu">
+              <!-- This link only exists in mobile -->
+              <li id="extra-mobile-link" class="nav-list-item">
+                  <a class="nav-link" href="/">HomePage</a>
+              </li>
+      
+              <li class="nav-list-item">
+                  <a class="nav-link" href="/projects">Quests<img src="http://vignette2.wikia.nocookie.net/clubpenguin/images/9/95/Pirates_2014_Party_Quest_Icon.png/revision/latest?cb=20141120132745" alt="Quest_icon"  width=15></a>
+              </li>
+              
+              <!-- Future page: About -->
+              <!-- <li class="nav-list-item">
+                  <a class="nav-link" href="/about">About</a>
+              </li> -->
+      
+              <li class="nav-list-item">
+                  <a class="nav-link" href="/hobbies">Hobbies<img src="https://cdn4.iconfinder.com/data/icons/glyphlibrary-one/100/controller-xbox-512.png" alt="Hobbies_Icon"  width=15></a>
+              </li>
+      
+              <li class="nav-list-item">
+                  <a class="nav-link" href="https://www.linkedin.com/in/hakeemsbuchanan/" target="_blank">Linked<img src="https://image.flaticon.com/icons/png/512/174/174857.png" alt="Hobbies_Icon"  width=15></a>
+              </li>
+      
+              <li class="nav-list-item list-end">
+                  <a class="nav-link" href="/resume">Lore</a>
+              </li>
+          
+      </ul></nav>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+      <footer class="site-footer">
+        <span class="site-footer-credits">See my other work on GitHub: <a href="https://github.com/KingBuchanan">KingBuchanan</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

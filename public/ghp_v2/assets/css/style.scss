@@ -1,0 +1,141 @@
+---
+---
+@import "{{ site.theme }}";
+@import url('https://unpkg.com/primer/build/build.css');
+@import 'highlight-syntax';
+
+$header-bg-color: #b5c7be !default;
+$header-bg-color-secondary: #155799 !default;
+.page-header{
+  padding-top: 5rem;
+  margin-top: 2;
+}
+
+body {
+    background-color: white;
+  }
+  
+  .section {
+    padding: calc(.6rem * 2);
+  }
+  
+  .container {
+    max-width: auto;
+    margin: 0 auto;
+  }
+/* Navigation wrapper */
+
+nav {
+    background-color:$header-bg-color;
+    //padding: .0003rem;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    overflow-y: visible;
+    background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+  }
+  
+  /* Navigation title - web */
+  
+  .nav-title {
+    display: inline-block;
+  }
+ 
+  a.home-link, a.nav-link {
+    text-decoration: white;
+  }
+  
+  a.home-link:link, a.home-link:visited, .home-text {
+    color: white;
+    font-weight: 400;
+    margin: 2;
+    margin-right: 1.2rem;
+    margin-left: 2rem;
+  }
+  
+  a.home-link:hover, a.home-link:active {
+    color: lightblue;
+  }
+  
+
+  
+  /* Navigation menu - web */
+  
+  .nav-menu {
+    display: inline-block;
+    padding: 20;
+    margin: 20;
+  }
+  
+  .nav-list-item {
+    display: inherit;
+    margin-left: 1.2rem;
+  }
+  
+  a.nav-link:link, a.nav-link:visited {
+    color: white;
+  }
+  
+  a.nav-link:hover, a.nav-link:active {
+    color: lightblue;
+  }
+  
+  .home-link {
+    display: inline-block;
+  }
+  
+  .home-text {
+    display: none;
+  }
+  
+  #extra-mobile-link {
+    display: none;
+  }
+
+  .github-component {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol !important;
+  }
+  
+  .repo-language-color {
+      filter: brightness(125%) !important;
+      border-radius: 50%;
+      display: inline-block;
+      height: 12px;
+      position: relative;
+      top: 2px;
+      width: 12px;
+  }
+  
+  .emoji {
+    width: 18px;
+    height: auto;
+    vertical-align: middle;
+  }
+  
+  .article {
+    h1, h2, h3, h4,
+    .highlight {
+      margin-bottom: 16px;
+    }
+  
+    blockquote {
+      color: #6a737d;
+      border-left: 2px solid #959da5;
+      padding-left: 16px;
+      margin-bottom: 16px;
+    }
+  
+    ul, ol {
+      padding-left: 32px;
+      margin-bottom: 16px;
+    }
+  
+    li ul, li ol {
+      padding-left: 16px;
+      margin-bottom: 0px;
+    }
+  }
+  
+  .min-height-full {
+    min-height: 100vh;
+  }
